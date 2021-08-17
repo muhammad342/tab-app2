@@ -13,17 +13,15 @@ const Camera = () => {
     const HandleCapture=()=>{
 
         setImg(WebRef.current.getScreenshot())
-        
-        setCapture(true)
-                if(Img){
-                    
-            setTimeout(()=>{
-                
-                history.push('/Final')
-                },1000)
+        setCapture(true);
                
-        }
         
+    }
+    const HandleSubmit=()=>{
+        if(Img){
+                history.push('/Final')
+        }
+
     }
     return (
         <>
@@ -34,6 +32,7 @@ const Camera = () => {
         <article className='button'>
         
         <Button  onClick={HandleCapture}>Capture</Button>
+        <Button  className='btn1' onClick={HandleSubmit}>Submit</Button>
         
        
             </article> 

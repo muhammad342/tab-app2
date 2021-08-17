@@ -6,25 +6,10 @@ import './index.css'
 import {LinkContainer} from 'react-router-bootstrap'
 
 const Picture = () => {
-   
     let history=useHistory()
-  
-    
-   
     const HandleSubmit=()=>{
-       
-     
-     
-            history.push('/Camera')
-    
-          
-    
-        
-     
-          
+            history.push('/Camera')    
     }
-    
- 
     return (
         <>
         <main>
@@ -32,8 +17,6 @@ const Picture = () => {
             <Button  className='camera' onClick={HandleSubmit}> <Image  src={Camera} alt='logo'  className='img'/></Button>
             </LinkContainer>
         </main>
-  
-
         </>
     )
 }

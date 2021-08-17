@@ -42,3 +42,6 @@ border: none !important;
   display: flex;
   justify-content: center;
 }
+.btn1{
+  margin-left: 1rem !important;
+}
