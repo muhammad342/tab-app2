@@ -3,6 +3,7 @@ import {Button,Image } from 'react-bootstrap'
 import { useHistory } from 'react-router'
 import Camera from './Assets/Camera.png'
 import './index.css'
+import {LinkContainer} from 'react-router-bootstrap'
 
 const Picture = () => {
    
@@ -27,9 +28,9 @@ const Picture = () => {
     return (
         <>
         <main>
-           
+           <LinkContainer to='/Camera'>
             <Button  className='camera' onClick={HandleSubmit}> <Image  src={Camera} alt='logo'  className='img'/></Button>
-            
+            </LinkContainer>
         </main>
   
 

@@ -1,18 +1,29 @@
 import React from 'react'
 import Webcam from 'react-webcam'
-import {useRef} from 'react'
+import {useRef,useState} from 'react'
 import { useHistory } from 'react-router'
-import { Button } from 'react-bootstrap'
+import { Button,Image } from 'react-bootstrap'
+import {LinkContainer} from 'react-router-bootstrap'
 
 const Camera = () => {
+    const[Img,setImg]=useState();
+    const[Capture,setCapture]=useState(false);
     const WebRef=useRef(null);
     let history=useHistory();
     const HandleCapture=()=>{
-        console.log(WebRef.current.getScreenshot())
-        setTimeout(()=>{
-            history.push('/Final')
-    
-            },1000)
+
+        setImg(WebRef.current.getScreenshot())
+        
+        setCapture(true)
+                if(Img){
+                    
+            setTimeout(()=>{
+                
+                history.push('/Final')
+                },1000)
+               
+        }
+        
     }
     return (
         <>
@@ -21,8 +32,15 @@ const Camera = () => {
          <Webcam  ref={WebRef}/>  
         </main>  
         <article className='button'>
+        
         <Button  onClick={HandleCapture}>Capture</Button>
+        
+       
             </article> 
+            <article className='button'>
+            {Capture ?   (<Image  src={Img} alt='logo'  className='img'/>) : ''}
+
+            </article>
         </>
     )
 }
