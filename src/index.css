@@ -21,6 +21,7 @@ main{
 }
 .img{
   height: 10rem;
+  text-align: center;
 }
 .input{
  display: flex !important;
@@ -31,4 +32,13 @@ main{
 .box{
   width: 5rem !important;
   height: 5rem !important;
+}
+.camera{
+border-radius: 50% !important;
+background-color: white !important;
+border: none !important;
+}
+.button{
+  display: flex;
+  justify-content: center;
 }

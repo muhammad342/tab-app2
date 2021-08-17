@@ -14,6 +14,7 @@ import pic3 from './Assets/Packazoid_(3).png'
 import {LinkContainer} from 'react-router-bootstrap'
 import Header from './Header'
 import Final from './Final'
+import Camera from './Camera' 
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
     <Route path='/'   component={Header}/>
      <Route path='/'  component={Phone} exact/>
      <Route path='/Picture' component={Picture}/>
+     <Route path='/Camera' component={Camera}/>
      <Route path='/Final' component={Final}/>
      
    </Router>
